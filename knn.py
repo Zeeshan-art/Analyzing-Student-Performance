@@ -79,5 +79,12 @@ ax.set_title('KNN Residuals')
 ax.grid(False)
 plt.show()
 
+cmrfc = confusion_matrix(y_test,y_head)
+f, ax = plt.subplots(figsize =(5,5))
+sns.heatmap(cmrfc,annot = True,linewidths=0.5,linecolor="red",fmt = ".0f",ax=ax)
+plt.xlabel("y_pred")
+plt.ylabel("y_true")
+plt.title("Rastgele Orman Algoritması Karmaşıklık Matrisi")
+plt.show()
 
 
